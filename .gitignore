@@ -17,6 +17,7 @@ bin/
 
 # Go workspace file
 go.work
+first-app
 
 # IDE specific files
 .idea/
