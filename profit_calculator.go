@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var revenue float64
 	var expenses float64
-	var tax_rate float64
+	var taxRate float64
 
 	fmt.Print("Enter the Revenue Generated: ")
 	fmt.Scan(&revenue)
@@ -14,11 +14,14 @@ func main() {
 	fmt.Scan(&expenses)
 
 	fmt.Print("Enter the Tax Rate: ")
-	fmt.Scan(&tax_rate)
+	fmt.Scan(&taxRate)
 
-	var earnings_before_tax float64 = revenue - expenses
-	var earnings_after_tax float64 = (revenue - expenses) * (1 - tax_rate)
+	var earningsBeforeTax float64 = revenue - expenses
+	var earningsAfterTax float64 = earningsBeforeTax * (1 - taxRate)
+	var ratio float64 = earningsBeforeTax / earningsAfterTax
 
-	fmt.Println("Earnings Before Tax: ", earnings_before_tax)
-	fmt.Println("Earnings After Tax: ", earnings_after_tax)
+	fmt.Println("Earnings Before Tax: ", earningsBeforeTax)
+	fmt.Println("Earnings After Tax: ", earningsAfterTax)
+	fmt.Println("Ratio: ", ratio)
 }
+
